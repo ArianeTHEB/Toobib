@@ -2,16 +2,31 @@
     <h1 class="header-logo">
         <a href="{{ path('main_accueil') }}" title="retour accueil">
             <img src="{{ asset('img/logo toobib.jpg') }}" alt="Toobib Logo"></a>
+
+
+{# pour afficher nav bar hors connexion :
+        {% if is_granted('IS_ANONYMOUS')%}
+            Merci de vous connecter
+            <button> <a href="{{ path('app_login') }}" title="se connecter">Se Connecter</a></button>
+        {%endif%}
+#}
+
     </h1>
     <a href="{{ path('main_accueil')}}" title="Retour Accueil">Accueil</a>
 
     <a href="#">Se Connecter</a>
 
-    <a href="#" title="A propos">A propos</a>
+    <a href="{{ path('main_aPropos')}}" title="A propos">A propos</a>
 
     <a href="#">Link 4</a>
 
     <a href="#">Recherche ton Toobib !</a>
 
     <span class="line"></span>
+
+
+    {# pour afficher la nav connectée :
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {%endif%}
+    #}
 </nav>
