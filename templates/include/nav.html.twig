@@ -6,7 +6,8 @@
 
 {# pour afficher nav bar hors connexion :
         {% if is_granted('IS_ANONYMOUS')%}
-            Merci de vous connecter
+        afficher a propos,se connecter et rercherche
+
             <button> <a href="{{ path('app_login') }}" title="se connecter">Se Connecter</a></button>
         {%endif%}
 #}
@@ -31,6 +32,7 @@
 
     {# pour afficher la nav connectée :
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        afficher a propos, se déconnecter, mes services, mes données, rechercher
         {%endif%}
     #}
 </nav>
