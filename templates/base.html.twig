@@ -33,7 +33,9 @@
 
 {#pied de page du site#}
 <footer style="background-color: #0000FF">
-    <div class="container">&copy; par l'association Interhop {{ "now"|date("Y") }} </div>
+    <div>&copy; par l'association Interhop {{ "now"|date("Y") }}
+        <a href="{{ path('main_aPropos')}}" title="A propos">A propos</a>
+    </div>
 </footer>
 
 </body>
